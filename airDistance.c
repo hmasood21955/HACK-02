@@ -10,3 +10,13 @@ int main ()
     scanf(" %f",&phi2);
     printf("enter value of delta1(logitude of difference |-180-180|) = ");
     scanf(" %f",&delta);
+
+    float radius = 6371; // radius of earth in kilometers.
+    float distance;
+
+    printf("(sin(%.2f)sin(%.2f)+cos(%.2f)cos(%.2f)cos(%.2f))*%.2f\n",phi1,phi2,phi1,phi2,delta,radius);
+    
+    distance=(sin(phi1)*sin(phi2)+cos(phi1)*cos(phi2)*cos(delta))*radius;
+    printf("distance is %f",distance);
+    return 0;
+}
